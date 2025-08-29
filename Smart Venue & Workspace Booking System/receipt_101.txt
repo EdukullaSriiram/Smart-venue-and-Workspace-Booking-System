@@ -1,0 +1,11 @@
+
+========= BOOKING RECEIPT =========
+Booking ID : 101
+Customer   : sri
+Venue ID   : 1
+Venue Name : Grand Palace
+Location   : Hyderabad
+Booking On : 2025-12-12
+-----------------------------------
+TOTAL AMOUNT : ₹50000.0
+===================================

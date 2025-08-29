@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Venue & Workspace Booking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f6f9;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.5rem;
+      color: #2c3e50;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    label {
+      display: block;
+      margin: 0.5rem 0 0.2rem;
+      font-weight: bold;
+    }
+    input, select, button {
+      padding: 0.5rem;
+      width: 100%;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background: #3498db;
+      color: white;
+      cursor: pointer;
+      border: none;
+    }
+    button:hover {
+      background: #2980b9;
+    }
+    .output {
+      background: #f9f9f9;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      min-height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Smart Venue & Workspace Booking System</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Search Venues</h2>
+      <label for="location">Enter Location:</label>
+      <input type="text" id="location">
+      <button onclick="searchVenues()">Search</button>
+      <div class="output" id="searchResult">Results will appear here...</div>
+    </section>
+
+    <section>
+      <h2>Book a Venue</h2>
+      <label for="venueId">Venue ID:</label>
+      <input type="text" id="venueId" placeholder="Enter venue ID">
+      
+      <label for="customer">Customer Name:</label>
+      <input type="text" id="customer" placeholder="Enter your name">
+      
+      <label for="date">Booking Date:</label>
+      <input type="date" id="date">
+      
+      <button onclick="bookVenue()">Book Venue</button>
+      <div class="output" id="bookingResult">Booking info will appear here...</div>
+    </section>
+
+    <section>
+      <h2>Cancel Booking</h2>
+      <label for="bookingId">Booking ID:</label>
+      <input type="text" id="bookingId" placeholder="Enter booking ID">
+      <button onclick="cancelBooking()">Cancel Booking</button>
+      <div class="output" id="cancelResult">Cancellation status will appear here...</div>
+    </section>
+
+    <section>
+      <h2>List Bookings</h2>
+      <button onclick="listBookings()">Show All Bookings</button>
+      <div class="output" id="listResult">Bookings will appear here...</div>
+    </section>
+  </main>
+
+  <script>
+    // Dummy JS to simulate output (Replace later with real API calls)
+    function searchVenues() {
+      let loc = document.getElementById("location").value;
+      document.getElementById("searchResult").innerText = 
+        "Showing venues in " + loc ;
+    }
+
+    function bookVenue() {
+      let id = document.getElementById("venueId").value;
+      let cust = document.getElementById("customer").value;
+      let date = document.getElementById("date").value;
+      document.getElementById("bookingResult").innerText =
+        "Booking confirmed for " + cust + " at venue #" + id + " on " + date;
+    }
+
+    function cancelBooking() {
+      let bid = document.getElementById("bookingId").value;
+      document.getElementById("cancelResult").innerText = 
+        "Booking #" + bid + " cancelled successfully ";
+    }
+
+    function listBookings() {
+      document.getElementById("listResult").innerText = 
+        "1) (B#101) Venue: 5 Customer: John Date: 2025-08-25\n2) (B#102) Venue: 7 Customer: Alice Date: 2025-08-30 ";
+    }
+  </script>
+</body>
+</html>

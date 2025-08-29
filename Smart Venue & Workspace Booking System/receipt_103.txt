@@ -1,0 +1,11 @@
+
+========= BOOKING RECEIPT =========
+Booking ID : 103
+Customer   : aa
+Venue ID   : 1
+Venue Name : Grand Palace
+Location   : Hyderabad
+Booking On : 2222-12-11
+-----------------------------------
+TOTAL AMOUNT : ₹50000.0
+===================================
